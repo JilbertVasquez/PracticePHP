@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,9 @@
     <title>User Portal</title>
 </head>
 <body>
-    
+    hello world
+    <form action="includes/logout.inc.php" method="POST">
+        <button type="submit">Logout</button>
+    </form>
 </body>
 </html>

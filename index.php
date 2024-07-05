@@ -10,12 +10,12 @@
 <body>
     <section class="con container-fluid d-flex justify-content-center align-items-center bg-primary ">
         <div class="form-container bg-danger rounded-3">
-            <form action="" method="POST" class="d-flex justify-content-center align-items-center flex-column container-fluid">
+            <form action="includes/login.inc.php" method="POST" class="d-flex justify-content-center align-items-center flex-column container-fluid">
                 <h1 class="text-uppercase p-2 text-white">Login</h1>
                 <input class="mt-5 mb-2 p-3 rounded" type="text" name="username" placeholder="Enter Username...">
                 <input class="mb-2 mt-2 p-3 rounded" type="password" name="pwd" placeholder="Enter Password...">
                 <h7 class="text-white">Don't have account? <a class="text-decoration-underline text-white" href="signup.php">Sign Up Now !!!</a></h7>
-                <button class="btn btn-primary mt-5">Login</button>
+                <button type="submit" name="submit" class="btn btn-primary mt-5">Login</button>
             </form>
         </div>
     

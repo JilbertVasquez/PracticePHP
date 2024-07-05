@@ -41,11 +41,11 @@ class SignUpCntr {
         $signup = new SignUp();
         $signup->setUser($this->fname, $this->lname, $this->username, $this->gmail, $this->pwd, $this->repwd);
 
-        session_start();
-        $_SESSION["username"] = $this->username;
+        // session_start();
+        // $_SESSION["username"] = $this->username;
 
-        header("location: ../index.php?error=none");
-        exit();
+        // header("location: ../index.php?error=none");
+        // exit();
     }
 
     private function emptyInput() {
