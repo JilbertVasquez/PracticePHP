@@ -10,17 +10,18 @@
 <body>
     <section class="con container-fluid d-flex justify-content-center align-items-center bg-primary ">
         <div class="form-container bg-danger rounded-3">
-            <form action="" method="POST" class="d-flex justify-content-center align-items-center flex-column container-fluid">
+            <form action="includes/signup.inc.php" method="POST" class="d-flex justify-content-center align-items-center flex-column container-fluid">
                 <h1 class="text-uppercase p-2 text-white">Sign Up</h1>
                 <div class="name d-flex container-fluid justify-content-between align-items-center">
                     <input class="mt-2 mb-2 p-3 rounded" type="text" name="fname" placeholder="First Name">
                     <input class="mt-2 mb-2 p-3 rounded" type="text" name="lname" placeholder="Last Name">
                 </div>
                 <input class="mt-2 mb-2 p-3 rounded" type="text" name="username" placeholder="Enter Username...">
+                <input class="mt-2 mb-2 p-3 rounded" type="text" name="gmail" placeholder="Enter Email...">
                 <input class="mb-2 mt-2 p-3 rounded" type="password" name="pwd" placeholder="Enter Password...">
                 <input class="mb-3 mt-2 p-3 rounded" type="password" name="repwd" placeholder="Re-enter Password...">
                 <h7 class="text-white">Already Have an account? <a class="text-decoration-underline text-white" href="index.php">Login Now !!!</a></h7>
-                <button class="btn btn-primary mt-4">SignUp</button>
+                <button type="submit" name="submit" class="btn btn-primary mt-4">SignUp</button>
             </form>
         </div>
     
