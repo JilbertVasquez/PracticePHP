@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const profileBtn = document.getElementById('profileBtn');
     const changePassBtn = document.getElementById('changePassBtn');
     const profileSection = document.getElementById('profile-section');

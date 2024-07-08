@@ -14,6 +14,7 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="userportal.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
     <title>User Portal</title>
 </head>
 <body>
@@ -34,21 +35,20 @@ if (!isset($_SESSION['username'])) {
         </div>
         <div class="sec-con bg-danger d-flex flex-row justify-content-center align-items-center ">
             <div class="left">
-                <button id="profileBtn">Profile</button>
-                <button id="changePassBtn">Change Password</button>
+                <button id="profileBtn" class="btn m-2">Profile</button>
+                <button id="changePassBtn" class="btn m-2">Change Password</button>
             </div>
             <div class="right">
-                <div id="profile-section" class="section">
+                <div id="profile-section h_full" class="section">
                     <?php include "profile.php"?>
                 </div>
-                <div id="changepass-section" class="section" style="display:block;">
+                <div id="changepass-section h_full" class="section" style="display:none;">
                     <?php include "changepass.php"?>
                 </div>
-
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="userchangesection.js"></script>
+    <script src="js/userchangesection.js"></script>
 </body>
 </html>
