@@ -6,6 +6,24 @@
     
 } */
 
+
 .profile-inner {
     margin-top: 5%;
+}
+
+.changepass-inner {
+    margin-top: 5%;
+}
+
+.changepass-sec {
+    height: 80%;
+}
+
+.newpass, .renewpass {
+    width: 40%;
+}
+
+.submit_button {
+    margin-top: 2%;
+    margin-left: 30%;
 }
