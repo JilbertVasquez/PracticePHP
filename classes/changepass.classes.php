@@ -1,41 +1,23 @@
 <?php
 
 class ChangePass extends Dbh {
-    public function getUser($username, $newpwd, $renewpwd) {
+    public function UpdatePass($username, $newpwd, $renewpwd) {
         $stmt = $this->connect()->prepare('SELECT * FROM students WHERE username = ?');
 
-        if (!$stmt->execute(array($username))) {
+        $hashedPwd = password_hash($newpwd, PASSWORD_DEFAULT);
+
+        if (!$stmt->execute(array($hashedPwd, $username))) {
             $stmt = null;
-            header ("location: ../signup.php=stmtfailed");
+            header("location: ../changepass.php?error=stmtfailed");
             exit();
         }
 
         if ($stmt->rowCount() == 0) {
             $stmt = null;
-            header ("location: ../index.php?error=usernotfound");
+            header("location: ../changepass.php?error=updatefailed");
+            exit();
         }
 
-        $pwdHashed = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        if ($pwdHashed) {
-            $stmt = $this->connect()->prepare('UPDATE students SET pwd = ?, repwd = ? WHERE username = ?');
-
-            if (!$stmt->execute(array($newpwd, $renewpwd, $username))) {
-                $stmt = null;
-                header ("location: ../username.php=stmtfailed");
-                exit();
-            }
-
-            if($stmt->rowCount() == 0) {
-                $stmt = null;
-                header ("location: ../username.php?error=usernotfound");
-                exit();
-            }
-
-            $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            return $user[0];
-        }
-
+        header("location: ../changepass.php?success=passwordupdated");
     }
 }
