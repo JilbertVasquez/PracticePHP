@@ -11,7 +11,7 @@
                     <h1>New Password</h1>
                     <input class="newpass p-2 rounded" type="text" name="newpwd" placeholder="Password...">
                     <h1>Retype New Password</h1>
-                    <input class="renewpass p-2 rounded" type="text" name="newpwd" placeholder="Retype New Password...">
+                    <input class="renewpass p-2 rounded" type="text" name="renewpwd" placeholder="Retype New Password...">
             </form>
             <button class="btn btn-primary submit_button">Submit</button>
         </div>
