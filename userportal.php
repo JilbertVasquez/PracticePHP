@@ -34,15 +34,15 @@ if (!isset($_SESSION['username'])) {
             </div>
         </div>
         <div class="sec-con bg-danger d-flex flex-row justify-content-center align-items-center ">
-            <div class="left">
+            <div class="left d-flex flex-column pt-5">
                 <button id="profileBtn" class="btn m-2">Profile</button>
                 <button id="changePassBtn" class="btn m-2">Change Password</button>
             </div>
             <div class="right">
-                <div id="profile-section h_full" class="section">
+                <div id="profile-section" class="section">
                     <?php include "profile.php"?>
                 </div>
-                <div id="changepass-section h_full" class="section" style="display:none;">
+                <div id="changepass-section" class="section" style="display:none;">
                     <?php include "changepass.php"?>
                 </div>
             </div>
