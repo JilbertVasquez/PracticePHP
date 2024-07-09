@@ -1,11 +1,8 @@
 <?php
 
 class UserProfile extends Dbh {
-    public function getUser() {
+    public function getUser($username) {
         $stmt = $this->connect()->prepare('SELECT * FROM students WHERE username = ?');
-
-        session_start();
-        $username = $_SESSION['username'];
 
         if (!$stmt->execute(array($username))) {
             $stmt = null;
